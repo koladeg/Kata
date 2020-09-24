@@ -1,0 +1,2 @@
+# Kata
+Katas Code challenges
