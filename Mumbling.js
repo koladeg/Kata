@@ -1,5 +1,4 @@
 // Examples:
-// accum("abcd") -> "A-Bb-Ccc-Dddd"
 // accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 // function willFit(present, box){
 //   let fst = present.reduce(function(a, arr) {return a + arr}, 0)
