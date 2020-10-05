@@ -96,3 +96,13 @@ function ceaserCipher(note, num) {
 }
 ceaserCipher("Big Car", -16);
 ceaserCipher("Javascript", -900);
+
+
+// Reverse all the words in a string
+
+function reverseWords (string) {
+  let str = string.split(' ')
+  let arr = str.map( a => a.split('').reverse().join('')).join(' ')
+  return arr
+}
+reverseWords("the Big Car");
