@@ -120,3 +120,58 @@ function reverseWords(string) {
   return reversedWordsArr.join(' ');
 }
 reverseWords('Coding JavaScript');
+
+// Reverse array in place
+
+function reverseArrayInPlace(arr) {
+  for (var i = 0; i < arr.length / 2; i++) {
+    var tempVar = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = tempVar;
+  }
+  return arr;
+}
+reverseArrayInPlace([1, 2, 3, 4, 5, 6, 7, 8]);
+
+// Return mean, median, and mode
+
+function getMean (array) {
+  let mean = array.reduce((agg, x) => (agg + x), 0)/ array.length
+  return mean
+}
+function getMedian (array) {
+  let median = []
+  let sorted = array.sort((a, b) => a - b)
+  let mid = Math.floor(array.length/2)
+  if(array.length % 2 == 0){
+    median = [array[mid], array[mid+1]]
+  }else{
+    median = [sorted[mid]]
+  }
+  return median
+}
+function getMode (array) {
+  let obj = {}
+  array.forEach( int => { if (!obj[int]) obj[int] = 0;
+    obj[int]++
+   } )
+   let max = obj[0]
+  for(i = 1; i < obj.length; i++){
+    if (obj[i] > max) max = obj[i];
+  }
+  let mode = []
+  for (i in obj){
+    if(obj[i] == max){
+      mode.push(i)
+    }
+  }
+  return mode
+}
+
+function meanMedianMode (array) {
+  console.log(getMean(array))
+  console.log(getMedian(array))
+  console.log(getMode(array)) 
+}
+meanMedianMode([2, 4, 5 ,0, 0, 0, 2, 2]);
+
