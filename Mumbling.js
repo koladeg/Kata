@@ -225,3 +225,20 @@ function getMode(array) {
   return modes;
 }
 meanMedianMode([9,10,23,10,23,9]);
+
+// return array of arrays where 2 values in array add up the Sum input
+
+function twoSum (array, sum) {
+  const map1 = array.map((x, index, array) => { 
+    for (i of array){
+      if (x + i == sum){ return [x, i] } 
+    } 
+  })
+  maps = map1.filter(function( element ) {
+   return element !== undefined;
+});
+
+  return maps;
+ }
+
+twoSum([1, 4, 6 ,5, 3,], 7);
