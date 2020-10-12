@@ -257,3 +257,15 @@ function twoSum(numArray, sum) {
   return pairs;
 }
 twoSum([1, 6, 4, 5, 3, 3], 7);
+
+// Finding factorial with recursion
+
+function factorial (num) {
+  if(num === 1){
+    return num
+  }else{
+    return num * factorial(num - 1)
+  }
+ }
+
+factorial(8);
